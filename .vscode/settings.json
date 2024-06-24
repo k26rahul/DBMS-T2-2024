@@ -14,8 +14,8 @@
       "server": "localhost",
       "port": 5432,
       "driver": "PostgreSQL",
-      "name": "my_test_db",
-      "database": "my_test_db",
+      "name": "flis",
+      "database": "flis",
       "username": "postgres"
     },
     {
@@ -32,8 +32,8 @@
       "server": "localhost",
       "port": 5432,
       "driver": "PostgreSQL",
-      "name": "flis",
-      "database": "flis",
+      "name": "my_test_db",
+      "database": "my_test_db",
       "username": "postgres"
     }
   ]
