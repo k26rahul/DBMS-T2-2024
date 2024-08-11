@@ -26,15 +26,6 @@
       "name": "university",
       "database": "university",
       "username": "postgres"
-    },
-    {
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 5432,
-      "driver": "PostgreSQL",
-      "name": "my_test_db",
-      "database": "my_test_db",
-      "username": "postgres"
     }
   ]
 }
