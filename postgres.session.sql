@@ -1,11 +1,11 @@
-CREATE DATABASE lis;
-
-CREATE DATABASE flis;
-
-CREATE DATABASE university;
-
-DROP DATABASE lis;
-
-DROP DATABASE flis;
-
-DROP DATABASE university;
+-- \i flisDb.sql
+-- \i lisDb.sql
+-- \i university.sql
+-- 
+-- CREATE DATABASE lis;
+-- CREATE DATABASE flis;
+-- CREATE DATABASE university;
+-- 
+-- DROP DATABASE lis;
+-- DROP DATABASE flis;
+-- DROP DATABASE university;
