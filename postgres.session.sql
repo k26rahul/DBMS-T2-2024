@@ -1,0 +1,5 @@
+CREATE DATABASE lis;
+
+CREATE DATABASE flis;
+
+CREATE DATABASE university;
