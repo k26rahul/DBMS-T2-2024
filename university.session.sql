@@ -189,3 +189,100 @@ WHERE
           dept_name = 'Psychology'
       )
   );
+
+-- 24
+SELECT
+  name,
+  salary
+FROM
+  instructor
+WHERE
+  salary IN (
+    SELECT
+      MAX(salary)
+    FROM
+      instructor
+    WHERE
+      dept_name IN (
+        SELECT
+          dept_name
+        FROM
+          instructor
+        GROUP BY
+          dept_name
+        HAVING
+          AVG(salary) > (
+            SELECT
+              MAX(salary)
+            FROM
+              instructor
+            WHERE
+              dept_name = 'Psychology'
+          )
+      )
+    GROUP BY
+      dept_name
+  );
+
+-- 24  Again
+SELECT
+  name,
+  salary
+FROM
+  instructor
+WHERE
+  salary IN (
+    SELECT
+      MAX(salary)
+    FROM
+      instructor
+    WHERE
+      dept_name IN (
+        SELECT
+          dept_name
+        FROM
+          instructor
+        GROUP BY
+          dept_name
+        HAVING
+          AVG(salary) > (
+            SELECT
+              MAX(salary)
+            FROM
+              instructor
+            WHERE
+              dept_name = 'Psychology'
+          )
+      )
+    GROUP BY
+      dept_name
+  );
+
+SELECT
+  course_id
+FROM
+  section
+WHERE
+  semester = 'Fall'
+  AND course_id NOT IN (
+    SELECT
+      course_id
+    FROM
+      section
+    WHERE
+      semester = 'Spring'
+  );
+
+SELECT
+  course_id
+FROM
+  section
+WHERE
+  semester = 'Fall'
+EXCEPT
+SELECT
+  course_id
+FROM
+  section
+WHERE
+  semester = 'Spring';

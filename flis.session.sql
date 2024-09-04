@@ -218,3 +218,36 @@ FROM
   matches
   INNER JOIN match_referees USING (match_num)
   INNER JOIN referees ON match_referees.referee = referees.referee_id;
+
+-- Week 3: Practice Question 1
+SELECT
+  name
+FROM
+  teams
+WHERE
+  team_id IN (
+    SELECT
+      team_id
+    FROM
+      (
+        SELECT
+          host_team_id as team_id,
+          count(host_team_id) as freq
+        FROM
+          matches
+        GROUP BY
+          host_team_id
+        UNION ALL
+        SELECT
+          guest_team_id as team_id,
+          count(guest_team_id) as freq
+        FROM
+          matches
+        GROUP BY
+          guest_team_id
+      ) AS temp
+    GROUP BY
+      team_id
+    HAVING
+      sum(freq) > 3
+  );
