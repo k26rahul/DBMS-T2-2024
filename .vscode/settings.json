@@ -5,15 +5,6 @@
       "server": "localhost",
       "port": 5432,
       "driver": "PostgreSQL",
-      "name": "lis",
-      "database": "lis",
-      "username": "postgres"
-    },
-    {
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 5432,
-      "driver": "PostgreSQL",
       "name": "flis",
       "database": "flis",
       "username": "postgres"
@@ -23,8 +14,8 @@
       "server": "localhost",
       "port": 5432,
       "driver": "PostgreSQL",
-      "name": "university",
-      "database": "university",
+      "name": "lis",
+      "database": "lis",
       "username": "postgres"
     },
     {
@@ -32,8 +23,8 @@
       "server": "localhost",
       "port": 5432,
       "driver": "PostgreSQL",
-      "name": "postgres",
-      "database": "postgres",
+      "name": "university",
+      "database": "university",
       "username": "postgres"
     }
   ]
